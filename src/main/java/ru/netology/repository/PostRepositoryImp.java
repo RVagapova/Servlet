@@ -9,7 +9,6 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.atomic.AtomicLong;
 
-@Repository
 public class PostRepositoryImp implements PostRepository {
     private final ConcurrentHashMap<Long, Post> data = new ConcurrentHashMap<>();
     private final AtomicLong idPost = new AtomicLong(0);

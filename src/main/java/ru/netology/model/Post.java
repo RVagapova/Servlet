@@ -1,8 +1,11 @@
 package ru.netology.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 public class Post {
     private long id;
     private String content;
+    private boolean removed;
 
     public Post() {
     }
@@ -26,5 +29,21 @@ public class Post {
 
     public void setContent(String content) {
         this.content = content;
+    }
+    @JsonIgnore
+    public boolean isRemoved() {
+        return removed;
+    }
+
+    public void setRemoved(boolean removed) {
+        this.removed = removed;
+    }
+
+    @Override
+    public String toString() {
+        return "Post{" +
+                "id=" + id +
+                ", content='" + content + '\'' +
+                '}';
     }
 }
